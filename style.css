@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* .container {
+  display: grid;
+  grid-template-columns: 1fr repeat(1, 3fr);
+} */
+
+.sidebar img {
+  max-width: 25px;
+  max-height: 25px;
+}
+
+/* .item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+} */
+
+.trending img {
+  max-width: 50px;
+  max-height: 50px;
+}
