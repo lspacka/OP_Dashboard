@@ -1,7 +1,6 @@
 /* TODO:
     * align sidebar and trending items
     * modal on project view with pic of it
-    * fix greeting
 */
 
 * {
@@ -29,11 +28,19 @@
   grid-template-columns: 2fr 1fr;
   /* grid-template-rows: 1fr 1fr; */
   grid-column: 2 / 4;
+  background-color: rgb(240, 245, 247);
 }
 
 .search-bar {
   display: flex;
   align-items: center;
+}
+
+input {
+  background-color: gainsboro;
+  border: none;
+  height: 25px;
+  border-radius: 5px;
 }
 
 .search-bar img {
@@ -61,14 +68,25 @@
   display: inline;
 }
 
-.greeting  img {
+.greet-con {
+  display: flex;
+  align-items: center;
+} 
+
+.greet-con  img {
   max-width: 60px;
   max-height: 60px;
 }
 
-.greeting p:nth-child(2) {
-  display: inline;
+.greeting {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 10px;
 }
+
+/* .greet-con p:nth-child(2) {
+  display: inline;
+} */
 
 .buttons {
   display: grid;
@@ -83,6 +101,8 @@
   height: 30px;
   font-size: 0.8rem;
   margin-right: 30px;
+  background-color: rgb(114, 192, 205);
+  color: rgb(255, 255, 255);
 }
 
 .sidebar {
@@ -118,6 +138,8 @@
 
 .item {
   margin-bottom: 15px;
+  display:grid;
+  grid-template-columns: 0.1fr 1fr;
 } 
 
 .item p {
@@ -150,6 +172,11 @@
   grid-row: 2 / 3;
   grid-column: 3;
 } */
+
+.projects,
+.right-side {
+  background-color: aliceblue;
+}
 
 .announcements {
   display: grid;
@@ -186,14 +213,14 @@
   /* height: fit-content; */
 }
 
-/* .profile p {
-  transform: translateY(15px);
-} */
+.profile p {
+  transform: translateY(7px);
+}
 
 .profile p:nth-child(3) {
   grid-column: 2;
   grid-row: 2;
-  transform: translateY(-30px);
+  transform: translateY(-25px);
 }
 /* .item {
   display: grid;
