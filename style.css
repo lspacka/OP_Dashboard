@@ -1,5 +1,6 @@
 /* TODO:
-    * align sidebar and trending items
+    * put icons on project cards
+    * jhey trick on project cards
     * modal on project view with pic of it
 */
 
@@ -133,7 +134,7 @@ input {
 
 .side-list-1,
 .side-list-2 {
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .item {
@@ -165,12 +166,30 @@ input {
   padding: 30px;
   width: 350px; /* provisional */
   height: 200px;
-  border: 1px solid red;
+}
+
+.project p:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* .right-side {
   grid-row: 2 / 3;
   grid-column: 3;
+} */
+
+.project,
+.announcement,
+.profile {
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+/* .project,
+.announcements,
+.trending {
+  
 } */
 
 .projects,
@@ -179,11 +198,12 @@ input {
 }
 
 .announcements {
-  display: grid;
+  /* display: grid; */
   /* grid-template-rows: 0.14fr repeat(3, 0.9fr); */
   /* grid-template-rows: repeat(4, 1fr); */
   /* grid-column: 3; */
   /* grid-row: 2; */
+  transform: translateY(30px);
 }
 
 .announcements-title {
@@ -192,9 +212,24 @@ input {
 } 
 
 .announcement {
+  width: 250px;
   height: fit-content;
-  padding: 30px;
-  border: solid 1px red;
+  padding-top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+
+.announcement p:first-child {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.announcement p:nth-child(2),
+.project p:nth-child(2) {
+  color:rgb(78, 86, 86);
 }
 
 .trending {
@@ -210,7 +245,14 @@ input {
 .profile {
   display: grid;
   grid-template-columns: 1fr 3fr;
+  padding: 10px;
+  padding-bottom: 0;
+  /* border: 1px solid red; */
   /* height: fit-content; */
+}
+
+.profile p:first-of-type {
+  font-weight: bold;
 }
 
 .profile p {
@@ -220,6 +262,7 @@ input {
 .profile p:nth-child(3) {
   grid-column: 2;
   grid-row: 2;
+  color:rgb(78, 86, 86);
   transform: translateY(-25px);
 }
 /* .item {
