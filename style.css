@@ -1,7 +1,9 @@
 /* TODO:
     * adjust font sizes
-    * fix horizontal gap between project cards
+    * fine tune colors
+    * change sidebar icons
     * jhey trick on project cards
+    * hover fx on sidebar items
     * modal on project view with pic of it
     * clean this mess
 */
@@ -18,6 +20,10 @@
   margin: 0;
   padding: 0;
   font-family: geist;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .container {
@@ -37,16 +43,22 @@
 .projects-title,
 .announcements-title,
 .trending p:first-child {
-  font-size: 1.26rem;
+  font-size: 1.17rem;
   font-weight: bold;
 }
 
 .header {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  /* grid-template-rows: 1fr 1fr; */
   grid-column: 2 / 4;
   background-color: rgb(240, 245, 247);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.greet-con,
+.buttons {
+  margin-top: 30px;
 }
 
 .search-bar {
@@ -74,12 +86,13 @@ input {
 .user-name {
   display: grid;
   align-items: center;
-  grid-template-columns: 0.5fr 1fr 3fr; 
+  grid-template-columns: 1fr 2fr 7fr; 
+  transform: translateX(83px);
 }
 
 .user-name img:first-child {
-  max-width: 20px;
-  max-height: 20px
+  max-width: 15px;
+  max-height: 15px
 }
 
 .user-name p {
@@ -102,6 +115,14 @@ input {
   margin-left: 10px;
 }
 
+.greeting p:first-child {
+  font-size: 0.8rem;
+}
+
+.greeting p:nth-child(2) {
+  font-size: 1.1rem;
+}
+
 .buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -113,7 +134,8 @@ input {
   border-radius: 7px;
   width: 100px;
   height: 30px;
-  font-size: 0.8rem;
+  font-size: 0.79rem;
+  font-weight: bold;
   margin-right: 30px;
   background-color: rgb(114, 192, 205);
   color: rgb(255, 255, 255);
@@ -121,14 +143,20 @@ input {
 
 .sidebar {
   grid-row: 1 / 4;
-  background-color: rgb(137, 172, 172);
+  background-color: #89acac;
   padding: 20px;
+  color: whitesmoke;
 }
 
 .sidebar-logo {
   display: grid;
   grid-template-columns: 1fr repeat(1, 2fr);
   align-items: center;
+}
+
+.sidebar-logo p {
+  font-size: 1.39rem;
+  font-weight: bold;
 }
 
 #logo {
@@ -161,6 +189,10 @@ input {
   transform: translateY(-13);
 }
 
+.item:hover {
+  background-color: rgb(128, 0, 38);
+}
+
 .projects {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
@@ -181,17 +213,18 @@ input {
   grid-template-rows: 1fr 1fr 1fr;
   max-height: 250px;
   padding: 30px;
+  font-size: 0.89rem;
 }
 
 .project p:first-child {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
 .project,
 .announcement,
 .profile {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   margin-bottom: 5px;
 }
@@ -209,7 +242,8 @@ input {
 
 .projects,
 .right-side {
-  background-color: rgb(122, 178, 196);
+  color: rgb(52, 63, 69);
+  background-color: #c5dbdb;
 }
 
 .projects-title,
@@ -223,12 +257,7 @@ input {
 }
 
 .announcements {
-  /* display: grid; */
-  /* grid-template-rows: 0.14fr repeat(3, 0.9fr); */
-  /* grid-template-rows: repeat(4, 1fr); */
-  /* grid-column: 3; */
-  /* grid-row: 2; */
-  transform: translateY(45px);
+  transform: translateY(42px);
 }
 
 .announcements-title {
@@ -244,12 +273,13 @@ input {
   padding-right: 20px;
   padding-bottom: 15px;
   overflow: hidden;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .announcement p:first-child {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .announcement p:nth-child(2),
@@ -258,7 +288,7 @@ input {
 }
 
 .trending {
-  margin-top: 50px;
+  margin-top: 80px;
   grid-row: 3 / 4;
   grid-column: 3;
 }
@@ -272,6 +302,7 @@ input {
   grid-template-columns: 1fr 3fr;
   padding: 10px;
   padding-bottom: 0;
+  font-size: 0.83rem;
 }
 
 .profile p:first-of-type {
