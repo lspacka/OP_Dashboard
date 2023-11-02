@@ -1,14 +1,9 @@
 /* TODO:
-    * adjust font sizes
-    * fine tune colors
-    * change sidebar icons
     * jhey trick on project cards
     * hover fx on sidebar items
     * modal on project view with pic of it
     * clean this mess
 */
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Raleway&family=Roboto:wght@300&display=swap');
 
 @font-face {
   font-family: geist;
@@ -54,6 +49,7 @@ body {
   background-color: rgb(240, 245, 247);
   font-size: 0.9rem;
   font-weight: bold;
+  color:#4e5656;
 }
 
 .greet-con,
@@ -129,7 +125,7 @@ input {
   align-items: center;
 }
 
-.buttons button {
+button {
   border: none;
   border-radius: 7px;
   width: 100px;
@@ -137,15 +133,19 @@ input {
   font-size: 0.79rem;
   font-weight: bold;
   margin-right: 30px;
-  background-color: rgb(114, 192, 205);
-  color: rgb(255, 255, 255);
+  background-color: #72c0cd;
+  color: white;
+}
+
+button:hover {
+  background-color: #89c7d0;
 }
 
 .sidebar {
   grid-row: 1 / 4;
   background-color: #89acac;
   padding: 20px;
-  color: whitesmoke;
+  color: #f5f5f5;
 }
 
 .sidebar-logo {
@@ -187,6 +187,7 @@ input {
 .item p {
   margin-left: 15px;
   transform: translateY(-13);
+  font-size: 0.94rem;
 }
 
 .item:hover {
@@ -197,11 +198,10 @@ input {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.3fr repeat(3, 1fr);
-  /* grid-row: 2 / 3; */
+  /* grid-template-rows: 0.3fr repeat(3, 1fr); */
+  /* grid-template-rows: 0.26fr repeat(3, 1fr); */
   grid-column: 2 / 3;
   gap: 15px;
-  /* overflow-y: hidden; */
 }
 
 .projects-title {
@@ -211,7 +211,7 @@ input {
 .project {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  max-height: 250px;
+  max-height: 212px;
   padding: 30px;
   font-size: 0.89rem;
 }
@@ -257,7 +257,7 @@ input {
 }
 
 .announcements {
-  transform: translateY(42px);
+  transform: translateY(37px);
 }
 
 .announcements-title {
