@@ -4,6 +4,8 @@ https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin
 
 Live preview: https://lspacka.github.io/OP_Dashboard/
 
+Font: https://vercel.com/font
+
 Icons: https://www.flaticon.com/uicons
 
 Avatars: https://getavataaars.com/
