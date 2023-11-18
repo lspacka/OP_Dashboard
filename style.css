@@ -1,6 +1,7 @@
 /* TODO:
     * jhey trick on project cards
     * modal on project view with pic of it
+    * fix announcements alignment with projects
 */
 
 @font-face {
@@ -199,6 +200,7 @@ button:hover {
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.28fr 1fr 1fr 1fr;
   grid-column: 2 / 3;
   gap: 15px;
 }
@@ -256,7 +258,7 @@ button:hover {
 }
 
 .announcements {
-  transform: translateY(37px);
+  transform: translateY(37px); /* fix this! */
 }
 
 .announcements-title {
